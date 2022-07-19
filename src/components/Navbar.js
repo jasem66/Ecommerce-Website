@@ -8,6 +8,8 @@ import CartButtons from './CartButtons'
 import { useProductsContext } from '../context/products_context'
 import { useUserContext } from '../context/user_context'
 
+// navbar
+
 const Nav = () => {
   return (
     <NavContainer>
