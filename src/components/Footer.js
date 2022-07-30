@@ -3,11 +3,11 @@ import styled from 'styled-components'
 const Footer = () => {
   return (
     <Wrapper>
-      <h5>
+      <div>
         &copy; {new Date().getFullYear()}
         <span> James shop</span>
         <h5>All rights reserved</h5>
-      </h5>
+      </div>
     </Wrapper>
   )
 }
