@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react' // important to import React here
 import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
 export const links = [
   {
