@@ -24,14 +24,14 @@ const SingleProductPage = () => {
     fetchSingleProduct,
   } = useProductsContext()
 
-  useEffect(() => {
-    if (error) {
-      console.log(error)
-      setTimeout(() => {
-        history.push('/')
-      }, 3000)
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (error) {
+  //     console.log(error)
+  //     setTimeout(() => {
+  //       history.push('/')
+  //     }, 3000)
+  //   }
+  // }, [])
 
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`)
