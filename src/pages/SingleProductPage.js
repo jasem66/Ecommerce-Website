@@ -27,6 +27,7 @@ const SingleProductPage = () => {
     fetchSingleProduct(`${url}${id}`)
     // eslint-disable-next-line
   }, [id])
+
   // useEffect(() => {
   //   if (error) {
   //     setTimeout(() => {
@@ -55,6 +56,7 @@ const SingleProductPage = () => {
     images,
   } = product
 
+
   return (
     <Wrapper>
       <PageHero title={name} product />
@@ -82,7 +84,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 && <AddToCart />}
+            {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
       </div>
