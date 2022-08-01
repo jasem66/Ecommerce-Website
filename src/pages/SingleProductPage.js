@@ -14,7 +14,7 @@ import {
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 const SingleProductPage = () => {
-  const { id } = useParams()
+  const { id } = useParams();
   const navigate = useNavigate()
   const {
     single_product_loading: loading,
