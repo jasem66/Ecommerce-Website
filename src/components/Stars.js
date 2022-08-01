@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
 
 const Stars = ({ stars, reviews }) => {
-  // console.log(reviews)
+
 
   const tempStars = Array.from({ length: 5 }, (_, index) => {
     const number = index + 0.5
@@ -23,7 +23,7 @@ const Stars = ({ stars, reviews }) => {
   return (
     <Wrapper>
       <div className='stars'>{tempStars}</div>
-      <p className='reviews'>{reviews} customer reviews</p>
+      {/* <p className='reviews'>{reviews} customer reviews</p> */}
     </Wrapper>
   )
 }
