@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams, useNavigate } from '../../node_modules/react-router-dom/Router'
+import { useParams } from 'react-router-dom'
 import { useProductsContext } from '../context/products_context'
 import { single_product_url as url } from '../utils/constants'
 import { formatPrice } from '../utils/helpers'
@@ -15,7 +15,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 const SingleProductPage = () => {
   const { id } = useParams();
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const {
     single_product_loading: loading,
     single_product_error: error,
@@ -27,15 +27,16 @@ const SingleProductPage = () => {
     fetchSingleProduct(`${url}${id}`)
     // eslint-disable-next-line
   }, [id])
-  useEffect(() => {
-    if (error) {
-      setTimeout(() => {
-        navigate('/')
-      }, 3000)
-    }
-    // eslint-disable-next-line
-  }, [error])
+  // useEffect(() => {
+  //   if (error) {
+  //     setTimeout(() => {
+  //       navigate('/')
+  //     }, 3000)
+  //   }
+  //   // eslint-disable-next-line
+  // }, [error])
   if (loading) {
+ 
     return <Loading />
   }
   if (error) {
@@ -53,6 +54,7 @@ const SingleProductPage = () => {
     company,
     images,
   } = product
+
   return (
     <Wrapper>
       <PageHero title={name} product />
@@ -61,10 +63,10 @@ const SingleProductPage = () => {
           back to products
         </Link>
         <div className='product-center'>
-          <ProductImages images={images} />
+          <ProductImages images={images} reviews={reviews} />
           <section className='content'>
             <h2>{name}</h2>
-            <Stars />
+            <Stars stars={stars} />
             <h5 className='price'>{formatPrice(price)}</h5>
             <p className='desc'>{description}</p>
             <p className='info'>
