@@ -13,6 +13,7 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
     h5 {
       margin-bottom: 0.5rem;
+      
     }
   }
   .search-input {
