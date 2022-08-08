@@ -6,7 +6,7 @@ const PageHero = ({title,product}) => {
     <Wrapper>
       <div className='section-cen'>
         <h3>
-          <Link to='/'>Home</Link>/
+          <Link to='/'>Home</Link>
           {product && <Link to='/products'>/products</Link>}/{title}
         </h3>
       </div>

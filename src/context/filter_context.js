@@ -15,7 +15,8 @@ import { useProductsContext } from './products_context'
 
 const initialState = {
   filtered_products:[],
-  all_products:[]
+  all_products:[],
+  grid_view:false
 }
 
 const FilterContext = React.createContext()
@@ -29,8 +30,8 @@ dispatch({type:LOAD_PRODUCTS,payload:products})
   }, [products])
   
   return (
-    <FilterContext.Provider value='filter context'>
-      {children}
+    <FilterContext.Provider value={{ ...state }}>
+      {children} 
     </FilterContext.Provider>
   )
 }
