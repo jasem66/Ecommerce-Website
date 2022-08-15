@@ -31,6 +31,7 @@ export const FilterProvider = ({ children }) => {
   useEffect(() => {
    dispatch({type:SORT_PRODUCTS})
   }, [products,state.sort])
+
   
 
   const setListView = () => {
