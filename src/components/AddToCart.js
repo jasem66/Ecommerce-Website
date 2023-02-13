@@ -32,7 +32,7 @@ const AddToCart = ({ product }) => {
   return (
     <Wrapper>
       <div className='colors'>
-        <span>colors :</span>
+        <span>Colors :</span>
 
         <div>
           {colors.map((color, index) => {
